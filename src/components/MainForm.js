@@ -27,7 +27,7 @@ export class MainForm extends Component {
         })
     };
 
-    handleChange = () => {
+    handleChange = (event, input) => {
         this.setState({ [input] : event.target.value })
     };
 

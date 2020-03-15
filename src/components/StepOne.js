@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export class StepOne extends Component {
   render() {
     return (
-      <div>
+      <div className="flex-container">
           <form>
               <label>Email:</label>
               <input type="email"></input><br/>
@@ -11,7 +11,7 @@ export class StepOne extends Component {
               <label>Password:</label>
               <input type="password"></input><br/>
           </form>
-          <button>Save and Continue</button>
+         {/* <button>Save and Continue</button> */}
       </div>
     )
   }
