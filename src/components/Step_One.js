@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export class Email_Info extends Component {
+export class Step_One extends Component {
   render() {
     return (
       <div>
@@ -17,4 +17,4 @@ export class Email_Info extends Component {
   }
 }
 
-export default Email_Info;
+export default Step_One;
