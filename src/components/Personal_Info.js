@@ -20,4 +20,4 @@ export class Personal_Info extends Component {
   }
 }
 
-export default Personal_Info
+export default Personal_Info;
