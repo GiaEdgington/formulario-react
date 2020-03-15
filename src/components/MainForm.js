@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import StepOne from './StepOne';
 import StepTwo from './StepTwo';
-import StepThree from './StepThree';
+import Confirmation from './Confirmation';
 
 export class MainForm extends Component {
 
@@ -39,17 +39,28 @@ export class MainForm extends Component {
       switch(step) {
         case 1:
             return (
-                <StepOne />
+                <StepOne 
+                nextStep={this.nextStep}
+                handleChange={this.handleChange}
+                values={values}
+                />
             )
-            
 
         case 2: return (
-            <StepTwo />
+            <StepTwo 
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+            />
         )
             
-        
         case 3: return (
-            <StepThree />
+            <Confirmation 
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+            />
         )    
       }
   }
