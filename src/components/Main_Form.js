@@ -14,6 +14,9 @@ export class Main_Form extends Component {
     }
 
   render() {
+      const { step } = this.state;
+      const { email, password, name, age } = this.state;
+      const values = { email, password, name, age };
     return (
       <div>
         
