@@ -13,6 +13,20 @@ export class MainForm extends Component {
         age: ''
     }
 
+    nextStep = () => {
+        const { step } = this.state;
+        this.setState({
+            step: step + 1
+        })
+    }
+
+    prevStep = () => {
+        const { step } = this.state;
+        this.setState({
+            step: step - 1
+        })
+    }
+
   render() {
       const { step } = this.state;
       const { email, password, name, age } = this.state;
