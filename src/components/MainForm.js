@@ -11,21 +11,25 @@ export class MainForm extends Component {
         password: '',
         name: '',
         age: ''
-    }
+    };
 
     nextStep = () => {
         const { step } = this.state;
         this.setState({
             step: step + 1
         })
-    }
+    };
 
     prevStep = () => {
         const { step } = this.state;
         this.setState({
             step: step - 1
         })
-    }
+    };
+
+    handleChange = () => {
+        this.setState({ [input] : event.target.value })
+    };
 
   render() {
       const { step } = this.state;
