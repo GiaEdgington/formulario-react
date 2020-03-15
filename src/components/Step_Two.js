@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 
-export class Personal_Info extends Component {
+export class Step_Two extends Component {
   render() {
     return (
       <div>
           <form>
-            <label>Email:</label>
-            <input type="email"></input><br/>
+            <label>Full Name:</label>
+            <input type="text"></input><br/>
 
-            <label>Password:</label>
-            <input type="password"></input><br/>
+            <label>Age:</label>
+            <input type="number"></input><br/>
           </form>
           <div>
             <button>Go Back</button>
@@ -20,4 +20,4 @@ export class Personal_Info extends Component {
   }
 }
 
-export default Personal_Info;
+export default Step_Two;
