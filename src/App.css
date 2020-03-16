@@ -1,3 +1,4 @@
+
 body, html {
   margin: 0;
 }
@@ -43,13 +44,14 @@ form input {
   outline: none;
 }
 
-.buttons {
+.arrows {
   display: flex;
+  margin-top: 1em;
   width: 45%;
-  justify-content: flex-end;
+  justify-content: space-evenly;
 }
 
-.buttons button {
+/* .buttons button {
   padding: .75em;
   margin-top: 1em;
   align-self: flex-end;
@@ -58,4 +60,4 @@ form input {
   font-size: .9em;
   font-weight: bold;
   border-radius: 20px;
-}
+} */
