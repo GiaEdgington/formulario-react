@@ -5,7 +5,9 @@ body, html {
 .container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
   height: 100vh;
 }
 
@@ -39,4 +41,21 @@ form input {
   border-radius: 20px;
   background:#f19f5d;
   outline: none;
+}
+
+.buttons {
+  display: flex;
+  width: 45%;
+  justify-content: flex-end;
+}
+
+.buttons button {
+  padding: .75em;
+  margin-top: 1em;
+  align-self: flex-end;
+  background-color: green;
+  color: white;
+  font-size: .9em;
+  font-weight: bold;
+  border-radius: 20px;
 }
