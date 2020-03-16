@@ -15,23 +15,24 @@ body, html {
 
 .flex-container {
   display: flex;
-  width: 90%;
-  height: 90%;
+  width: 85%;
+  height: 85%;
   flex-direction: column;
   justify-content: center;
   justify-items: center;
   align-items: center;
   background-color: #ebf0e5;
 
-  @media only screen and (min-width: 600px) {
-    width: 50%;
+  @include medium {
+    width: 70%;
+    height: 70%;
   }
 
-  @media only screen and (min-width: 788px) {
+  @include large {
     width: 45%;
+    height: 45%;
   }
 }
-
 
 form {
   padding: 5px;
