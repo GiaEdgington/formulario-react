@@ -1,3 +1,4 @@
+@import 'base';
 
 body, html {
   margin: 0;
@@ -14,14 +15,23 @@ body, html {
 
 .flex-container {
   display: flex;
-  width: 45%;
-  height: 400px;
+  width: 90%;
+  height: 90%;
   flex-direction: column;
   justify-content: center;
   justify-items: center;
   align-items: center;
   background-color: #ebf0e5;
+
+  @media only screen and (min-width: 600px) {
+    width: 50%;
+  }
+
+  @media only screen and (min-width: 788px) {
+    width: 45%;
+  }
 }
+
 
 form {
   padding: 5px;
