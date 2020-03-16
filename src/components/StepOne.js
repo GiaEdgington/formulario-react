@@ -18,7 +18,10 @@ export class StepOne extends Component {
               placeholder="your_password"
               type="password"></input><br/>
           </form>
-         {/* <button>Save and Continue</button> */}
+          <div className="buttons">
+            <button>Save and Continue</button>
+          </div>
+         
       </div>
     )
   }
