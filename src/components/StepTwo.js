@@ -13,6 +13,7 @@ export class StepTwo extends Component {
   }
 
   render() {
+    //console.log(this.props.values.email);
     return (
       <div className="container">
           <form className="flex-container">

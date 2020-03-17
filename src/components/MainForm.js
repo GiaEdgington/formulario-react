@@ -36,8 +36,6 @@ export class MainForm extends Component {
       const { email, password, name, age } = this.state;
       const values = { email, password, name, age };
 
-      console.log(age);
-
       switch(step) {
         case 1:
             return (
