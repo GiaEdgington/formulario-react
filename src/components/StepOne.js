@@ -8,6 +8,7 @@ export class StepOne extends Component {
   }
 
   render() {
+    const { values } =  this.props;
     return (
       <div className="container">
           <form className="flex-container">
@@ -16,14 +17,16 @@ export class StepOne extends Component {
               placeholder="your_email@email.com"
               autoComplete="off"
               type="email" 
-              onChange = {this.props.handleChange('email')}>
+              onChange = {this.props.handleChange('email')}
+              defaultValue={values.email}>
               </input><br/>
 
               <label>Password:</label>
               <input 
               placeholder="your_password"
               type="password"
-              onChange = {this.props.handleChange('password')}>
+              onChange = {this.props.handleChange('password')}
+              defaultValue={values.password}>
               </input><br/>
           </form>
           <div className="arrows">
