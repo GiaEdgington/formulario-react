@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export class StepTwo extends Component {
 
@@ -9,7 +9,9 @@ export class StepTwo extends Component {
 
   saveAndContinue = (event) => {
     event.preventDefault();
-    this.props.nextStep();
+    setTimeout(() => {
+      this.props.nextStep();
+    }, 500); // simulate API load time
   }
 
   render() {
