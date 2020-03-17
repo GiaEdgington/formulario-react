@@ -17,10 +17,17 @@ export class StepTwo extends Component {
       <div className="container">
           <form className="flex-container">
             <label>Full Name:</label>
-            <input type="text"></input><br/>
+            <input 
+            type="text"
+            placeholder="Your Name"
+            onChange={this.props.handleChange('name')}>
+            </input><br/>
 
             <label>Age:</label>
-            <input type="number"></input><br/>
+            <input 
+            type="number"
+            onChange={this.props.handleChange('age')}>
+            </input><br/>
           </form>
           <div className="arrows">
             <svg onClick={this.goBack} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>
