@@ -13,7 +13,7 @@ export class StepTwo extends Component {
   }
 
   render() {
-    //console.log(this.props.values.email);
+    const { values } =  this.props;
     return (
       <div className="container">
           <form className="flex-container">
@@ -21,13 +21,15 @@ export class StepTwo extends Component {
             <input 
             type="text"
             placeholder="Your Name"
-            onChange={this.props.handleChange('name')}>
+            onChange={this.props.handleChange('name')}
+            defaultValue={values.name}>
             </input><br/>
 
             <label>Age:</label>
             <input 
             type="number"
-            onChange={this.props.handleChange('age')}>
+            onChange={this.props.handleChange('age')}
+            defaultValue={values.age}>
             </input><br/>
           </form>
           <div className="arrows">
