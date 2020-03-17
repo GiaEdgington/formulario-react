@@ -12,6 +12,12 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  margin-top: 0;
+  margin-bottom: 2.5em;
+  color: white;
+}
+
 h4 {
   width: 50%;
   background-color: #cdd4cf;
@@ -60,6 +66,7 @@ p {
 
 form {
   padding: 5px;
+  background-image: linear-gradient(170deg, rgba(148, 24, 24, 0.986), rgba(235, 183, 42, 0.644), rgba(243, 212, 110, 0.644));
 }
 
 form label {
@@ -77,20 +84,19 @@ form input {
   margin: .25em;
   line-height: 2.5em;
   border: 2px solid white;
-  border-radius: 20px;
   background:white;
   outline: none;
 }
 
 button {
   margin-top: 1em;
-  padding: .75em 2em;
+  padding: .5em 1.5em;
   font-size: 1em;
   font-weight: bold;
+  color: white;
   letter-spacing: .2em;
-  border-radius: 15px;
-  border: 1px #bced7b solid;
-  background-color: #bced7b;
+  border: 1px #28f3c7 solid;
+  background-color: #28f3c7;
   box-shadow: 0 1px 7px #c9c7c7;
 }
 

@@ -12,23 +12,24 @@ export class StepOne extends Component {
     return (
       <div className="container">
           <form className="flex-container">
-              <label>Email</label>
-              <input
+            <h2>Login Information</h2>
+            <label>Email</label>
+            <input
               placeholder="your_email@email.com"
               autoComplete="off"
               type="email" 
               onChange = {this.props.handleChange('email')}
               defaultValue={values.email}>
-              </input><br/>
+            </input><br/>
 
-              <label>Password</label>
-              <input 
+            <label>Password</label>
+            <input 
               placeholder="your_password"
               type="password"
               onChange = {this.props.handleChange('password')}
               defaultValue={values.password}>
-              </input><br/>
-              <button onClick={this.saveAndContinue}>Save</button>
+            </input><br/>
+            <button onClick={this.saveAndContinue}>Save</button>
           </form>
           <div className="arrows">
             <svg xmlns="http://www.w3.org/2000/svg" opacity="0.2" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>
