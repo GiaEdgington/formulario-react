@@ -74,6 +74,17 @@ form input {
   outline: none;
 }
 
+button {
+  margin-top: 1em;
+  padding: .75em 2em;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 15px;
+  border: 1px #bced7b solid;
+  background-color: #bced7b;
+  box-shadow: 0 1px 7px #b6b4b4;
+}
+
 .arrows {
   display: flex;
   margin-top: 1em;
@@ -81,13 +92,4 @@ form input {
   justify-content: space-evenly;
 }
 
-/* .buttons button {
-  padding: .75em;
-  margin-top: 1em;
-  align-self: flex-end;
-  background-color: green;
-  color: white;
-  font-size: .9em;
-  font-weight: bold;
-  border-radius: 20px;
-} */
+
