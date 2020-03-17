@@ -1,6 +1,10 @@
 @import 'base';
 
-body, html, h4, p {
+body {
+  margin: 0;
+}
+
+html, h4, p {
   margin: 0;
 }
 
@@ -24,6 +28,8 @@ p {
 
 .container {
   display: flex;
+  background-image:url('../images/heather-shevlin-WqcRpNq_220-unsplash.jpg');
+  background-size: cover;
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -58,7 +64,9 @@ form {
 
 form label {
   text-align: left;
+  font-weight: bold;
   margin-bottom: .5em;
+  letter-spacing: .2em;
 }
 
 form input {
@@ -79,6 +87,7 @@ button {
   padding: .75em 2em;
   font-size: 1em;
   font-weight: bold;
+  letter-spacing: .2em;
   border-radius: 15px;
   border: 1px #bced7b solid;
   background-color: #bced7b;
@@ -87,7 +96,6 @@ button {
 
 .arrows {
   display: flex;
-  margin-top: 1em;
   width: 45%;
   justify-content: space-evenly;
 }
