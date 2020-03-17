@@ -46,12 +46,13 @@ form label {
 form input {
   width: 60%;
   text-align: center;
-  padding: .5em;
+  font-size: 1em;
+  padding: .25em;
   margin: .25em;
-  line-height: 3em;
+  line-height: 2.5em;
   border: 2px solid white;
   border-radius: 20px;
-  background:#f19f5d;
+  background:white;
   outline: none;
 }
 
