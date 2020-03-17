@@ -27,7 +27,7 @@ export class MainForm extends Component {
         })
     };
 
-    handleChange = (event, input) => {
+    handleChange = input => event => {
         this.setState({ [input] : event.target.value })
     };
 
@@ -35,6 +35,8 @@ export class MainForm extends Component {
       const { step } = this.state;
       const { email, password, name, age } = this.state;
       const values = { email, password, name, age };
+
+      console.log(email);
 
       switch(step) {
         case 1:
