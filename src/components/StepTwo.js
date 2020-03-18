@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 
 export class StepTwo extends Component {
 
+  state={
+    errors: false
+  }
+
   goBack = (event) => {
     event.preventDefault();
     this.props.prevStep();
@@ -9,36 +13,46 @@ export class StepTwo extends Component {
 
   saveAndContinue = (event) => {
     event.preventDefault();
-    console.log(this.props.values);
-    setTimeout(() => {
-      this.props.nextStep();
-    }, 500); // simulate API load time
+    
+    if(!this.props.values.name){
+      this.setState({ errors: true })
+    } else {
+      setTimeout(() => {
+        this.props.nextStep();
+      }, 500); // simulate API load time
+    }
   }
 
   render() {
     const { values } =  this.props;
     return (
       <div className="container">
-          <form className="flex-container">
+          <form className="flex-container" onClick={this.saveAndContinue}>
             <h2>Personal Information</h2>
-            <label for="userFullName">Full Name</label>
+            {this.state.errors ? <span className="error">*Field is required.</span>
+            :
+            <div></div>}
+            <label htmlFor="userFullName">Full Name</label>
             <input 
               type="text"
+              className="inputClass"
               id="userFullName"
               onChange={this.props.handleChange('name')}
-              defaultValue={values.name}>
-            </input><br/>
+              defaultValue={values.name}
+              required />
+              <br/>
 
-            <label for="userAge">Age</label>
+            <label htmlFor="userAge">Age</label>
             <input 
               type="number"
+              className="inputClass"
               id="userAge"
               onChange={this.props.handleChange('age')}
               defaultValue={values.age}>
             </input><br/>
             <div className="submit">
               <span onClick={this.goBack}>Go Back</span>
-              <button onClick={this.saveAndContinue}>Submit</button>
+              <button type="submit">Submit</button>
             </div> 
           </form>
       </div>
