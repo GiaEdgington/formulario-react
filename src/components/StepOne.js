@@ -13,18 +13,18 @@ export class StepOne extends Component {
       <div className="container">
           <form className="flex-container">
             <h2>Login Information</h2>
-            <label>Email</label>
+            <label for="userEmail">Email</label>
             <input
-              placeholder="your_email@email.com"
+              id="userEmail"
               autoComplete="off"
               type="email" 
               onChange = {this.props.handleChange('email')}
               defaultValue={values.email}>
             </input><br/>
 
-            <label>Password</label>
+            <label for="userPassword">Password</label>
             <input 
-              placeholder="your_password"
+              id="userPassword"
               type="password"
               onChange = {this.props.handleChange('password')}
               defaultValue={values.password}>
@@ -32,7 +32,6 @@ export class StepOne extends Component {
             <div className="continue">
               <span onClick={this.saveAndContinue}>Continue</span>
             </div>
-            {/* <button onClick={this.saveAndContinue}>Save</button> */}
           </form>
       </div> 
     )
