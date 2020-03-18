@@ -10,7 +10,15 @@ html, h4, p {
 
 h1 {
   text-align: center;
-  font-size: 2.5em;
+  font-size: 1.3em;
+
+  @include medium {
+    font-size: 2.3em;
+  }
+
+  @include large {
+    font-size: 2.3em;
+  }
 }
 
 h2 {
@@ -20,11 +28,22 @@ h2 {
 }
 
 h4 {
-  width: 50%;
+  width: 60%;
   background-color: #bb8d57;
   font-weight: bold;
   color: white;
-  padding: .7em;
+  padding: .35em .9em;
+  font-size: .75em;
+
+  @include medium {
+    font-size: 1em;
+    padding: .7em;
+  }
+
+  @include large {
+    font-size: 1em;
+    padding: .7em;
+  }
 }
 
 p {
@@ -41,6 +60,11 @@ p {
   align-items: center;
   flex-wrap: wrap;
   height: 100vh;
+
+  @include large {
+    background-position: bottom;
+  }
+
 }
 
 .flex-container {
@@ -51,7 +75,7 @@ p {
   justify-content: center;
   justify-items: center;
   align-items: center;
-  background-color: #b3cdd4d3;
+  background-color: #b3cdd4de;
 
   @include medium {
     width: 70%;
@@ -60,12 +84,13 @@ p {
 
   @include large {
     width: 45%;
-    height: 45%;
+    height: 65%;
   }
 }
 
 .flex-container p {
-  padding: 1.3em .7em;
+  width: 60%;
+  padding: 1.1em .7em;
   background-color: rgba(236, 214, 85, 0.719);
 }
 
@@ -90,7 +115,10 @@ form input {
   line-height: 2.5em;
   border: 2px solid white;
   background:white;
-  outline: none;
+}
+
+input:focus {
+  outline: #1fc982 solid;
 }
 
 button {
@@ -99,9 +127,10 @@ button {
   font-weight: bold;
   color: white;
   letter-spacing: .2em;
-  border: 1px #28f3c7 solid;
-  background-color: #28f3c7;
+  border: 1px #1fc982 solid;
+  background-color: #1fc982;
   box-shadow: 0 1px 7px #c9c7c7;
+  cursor: pointer;
 }
 
 .submit {
@@ -116,6 +145,7 @@ button {
     width: 60%;
     justify-content: space-between;
     align-items: flex-start;
+    cursor: pointer;
   }
 
   @include large {
@@ -124,6 +154,7 @@ button {
     width: 60%;
     justify-content: space-between;
     align-items: flex-start;
+    cursor: pointer;
   }
 }
 
@@ -143,10 +174,12 @@ span {
 
   @include medium {
     text-align: right;
+    cursor: pointer;
   }
 
   @include large {
     text-align: right;
+    cursor: pointer;
   }
 
 }

@@ -13,7 +13,11 @@ export class Confirmation extends Component {
     return (
       <div className="container">
         <div className="flex-container">
+          {firstName ? 
           <h1>Thank you, {firstName},<br/>for signing up!</h1>
+          :
+          <h1>Thank you, Dear User,<br/>for signing up!</h1>
+          }
           <h3>Here are your details:</h3>
           <h4>NAME</h4>
           <p>{values.name}</p>
