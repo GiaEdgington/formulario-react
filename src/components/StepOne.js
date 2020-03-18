@@ -2,35 +2,50 @@ import React, { Component } from 'react';
 
 export class StepOne extends Component {
 
+  state = {
+    errors: false
+  }
+
   saveAndContinue = (event) => {
     event.preventDefault();
-    this.props.nextStep();
+
+    if(!this.props.values.email || !this.props.values.password){
+      this.setState({ errors: true })
+    } else {
+      this.props.nextStep();
+    }
   }
 
   render() {
     const { values } =  this.props;
     return (
       <div className="container">
-          <form className="flex-container">
+          <form className="flex-container" onSubmit={this.saveAndContinue}>
             <h2>Login Information</h2>
-            <label for="userEmail">Email</label>
+            {this.state.errors ? <span className="error">*Field is required.</span>
+            :
+            <div></div>}
+            <label htmlFor="userEmail">Email</label>
             <input
-              id="userEmail"
-              autoComplete="off"
               type="email" 
+              className="inputClass"
+              id="userEmail"
               onChange = {this.props.handleChange('email')}
-              defaultValue={values.email}>
-            </input><br/>
+              defaultValue={values.email} 
+              required />
+            <br/>
 
-            <label for="userPassword">Password</label>
+            <label htmlFor="userPassword">Password</label>
             <input 
               id="userPassword"
+              className="inputClass"
               type="password"
               onChange = {this.props.handleChange('password')}
-              defaultValue={values.password}>
-            </input><br/>
+              defaultValue={values.password} 
+              required />
+            <br/>
             <div className="continue">
-              <span onClick={this.saveAndContinue}>Continue</span>
+              <input type="submit" value="Continue"/>
             </div>
           </form>
       </div> 
