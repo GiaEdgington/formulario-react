@@ -9,6 +9,7 @@ export class StepTwo extends Component {
 
   saveAndContinue = (event) => {
     event.preventDefault();
+    console.log(this.props.values);
     setTimeout(() => {
       this.props.nextStep();
     }, 500); // simulate API load time
@@ -40,7 +41,6 @@ export class StepTwo extends Component {
               <button onClick={this.saveAndContinue}>Submit</button>
             </div> 
           </form>
-          
       </div>
     )
   }
