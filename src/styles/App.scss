@@ -171,15 +171,16 @@ input:focus:invalid {
 
 .submit {
   display: flex;
+
   flex-direction: column;
   height: 6em;
-  align-items: center;justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 
   @include medium {
     flex-direction: row;
     margin-top: 2em;
     width: 60%;
-    justify-content: space-between;
     align-items: flex-start;
     cursor: pointer;
   }
@@ -188,19 +189,19 @@ input:focus:invalid {
     flex-direction: row;
     margin-top: 2em;
     width: 60%;
-    justify-content: space-between;
     align-items: flex-start;
     cursor: pointer;
   }
 }
 
 .submit span {
-  border-bottom: 1px solid black;
+  align-self: flex-start;
   font-size: 1.2em;
 }
 
 .continue input {
   font-size: .85em;
+  padding: .8em;
   letter-spacing: .15em;
   font-weight: bold;
   border: none;
@@ -210,6 +211,12 @@ input:focus:invalid {
     font-size: 1em;
     padding: 0.75em;
   }
+
+  @include large {
+    font-size: 1em;
+    padding: 0.75em;
+  }
+
 }
 
 .continue {
@@ -232,4 +239,20 @@ input:focus:invalid {
   padding: 1.1em .7em;
   text-align: left;
   border: none;
+}
+
+//add green checklist to inputs
+
+.flex-container span {
+  width: 60%;
+  text-align: center;
+  //margin-top: 1em;
+
+  @include medium {
+    text-align: left;
+  }
+
+  @include large {
+    text-align: left;
+  }
 }
