@@ -25,7 +25,7 @@ export class StepOne extends Component {
             {this.state.errors ? <span className="error">*Field is required.</span>
             :
             <div></div>}
-            <label htmlFor="userEmail">Email</label>
+            <label htmlFor="userEmail">Email:*</label>
             <input
               type="email" 
               className="inputClass"
@@ -35,7 +35,7 @@ export class StepOne extends Component {
               required />
             <br/>
 
-            <label htmlFor="userPassword">Password</label>
+            <label htmlFor="userPassword">Password:*</label>
             <input 
               id="userPassword"
               className="inputClass"
@@ -43,6 +43,7 @@ export class StepOne extends Component {
               onChange = {this.props.handleChange('password')}
               defaultValue={values.password} 
               required />
+              <span>*Required fields</span>
             <br/>
             <div className="continue">
               <input type="submit" value="Continue"/>

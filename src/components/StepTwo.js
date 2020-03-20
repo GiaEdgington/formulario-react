@@ -32,7 +32,7 @@ export class StepTwo extends Component {
             {this.state.errors ? <span className="error">*Field is required.</span>
             :
             <div></div>}
-            <label htmlFor="userFullName">Full Name</label>
+            <label htmlFor="userFullName">Full Name:*</label>
             <input 
               type="text"
               className="inputClass"
@@ -50,6 +50,7 @@ export class StepTwo extends Component {
               onChange={this.props.handleChange('age')}
               defaultValue={values.age}>
             </input><br/>
+            <span>*Required fields</span>
             <div className="submit">
               <span onClick={this.goBack}>Go Back</span>
               <button type="submit">Submit</button>
