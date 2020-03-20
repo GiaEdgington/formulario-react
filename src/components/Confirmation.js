@@ -12,7 +12,7 @@ export class Confirmation extends Component {
     var firstName = values.name.replace(/ .*/,'');
     return (
       <div className="container">
-        <div className="flex-container">
+        <div className="confirmation">
           {firstName ? 
           <h1>Thank you, {firstName},<br/>for signing up!</h1>
           :
