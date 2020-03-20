@@ -27,7 +27,7 @@ export class StepTwo extends Component {
     const { values } =  this.props;
     return (
       <div className="container">
-          <form className="flex-container" onClick={this.saveAndContinue}>
+          <form className="flex-container" onSubmit={this.saveAndContinue}>
             <h2>Personal Information</h2>
             {this.state.errors ? <span className="error">*Field is required.</span>
             :
